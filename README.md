@@ -71,7 +71,7 @@ python backend.py
 
 1. Sign up: Users can create an account.
 
-2. Login: Log in to their existing account.
+2. Login: Log into their existing account.
 
 3. Forgot Password: Can set up a new password using their registered account email.
 ### Contributing

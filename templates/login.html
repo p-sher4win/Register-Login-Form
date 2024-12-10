@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='image/panel.jpg') }}" alt="panel">
+        </div>
+        <div class="login-container">
+            <div class="login-panel">
+                <div class="panel-header">
+                    <h2>Login to Wardrobe</h2>
+                </div>
+
+                <div class="panel-signin-button">
+                    <div class="sign-google">
+                        <button><span class="google-logo"><img src="{{ url_for('static', filename='image/Gb.png') }}"
+                                    alt="googleLogo"></span><span class="goole-text">Sign in with Google</span></button>
+                    </div>
+                    <div class="sign-social">
+                        <button><span class="social-X"><img src="{{ url_for('static', filename='image/X.png') }}"
+                                    alt="xLogo"></span></button>
+                        <button><span class="social-Fb"><img src="{{ url_for('static', filename='image/Fb.png') }}"
+                                    alt="fbLogo"></span></button>
+                    </div>
+                </div>
+
+                <div class="panel-or">
+                    <div>
+                        --------------------------
+                        <span class="or-text">Or</span>
+                        -------------------------
+                    </div>
+                </div>
+
+                <div class="panel-user-input">
+                    <div class="user-label">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-text">
+                        <input type="text" id="user_val">
+                    </div>
+                </div>
+
+                <div class="panel-pass-input">
+                    <div class="pass-label">
+                        <label>Password</label>
+                    </div>
+                    <div class="pass-text">
+                        <input type="password" id="pass_val">
+                        <img id="eye" src="{{ url_for('static', filename='image/ecloseb.png') }}" alt="eyeopen">
+                    </div>
+                </div>
+
+                <div class="panel-forgot">
+                    <a href="{{ url_for('forgotPass') }}">Forgot Password?</a>
+                </div>
+
+                <div class="panel-login-btn">
+                    <button onclick="getCredentials()">Login</button>
+                </div>
+
+                <div class="panel-new-acc">
+                    <label>Don't have an account?</label>
+                    <a href="{{ url_for('signUpPage') }}">Create new account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

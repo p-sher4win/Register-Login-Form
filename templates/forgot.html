@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUpPage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forgot.css') }}">
+    <script src="{{ url_for('static', filename='js/forgot.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="for-container">
+            <div class="for-panel">
+                <div class="panel-header">
+                    <h2>Reset Your Password</h2>
+                </div>
+
+                <div class="panel-email-input">
+                    <div class="email-label">
+                        <label>Email Address</label>
+                    </div>
+                    <div class="email-text">
+                        <input type="email" id="email_val" placeholder="usermail@gmail.com">
+                    </div>
+                </div>
+
+                <div class="panel-password">
+                    <div class="panel-pass-input">
+                        <div class="pass-label">
+                            <label>Password</label>
+                        </div>
+                        <div class="pass-text">
+                            <input type="password" id="pass_val"
+                                placeholder="New password must be atleast 8-16 characters">
+                            <img src="{{ url_for('static', filename='image/ecloseb.png') }}" alt="eyeopen" id="eye">
+                        </div>
+                    </div>
+
+                    <div class="panel-pass-input">
+                        <div class="pass-label">
+                            <label>Confirm Password</label>
+                        </div>
+                        <div class="pass-text">
+                            <input type="password" id="pass_con_val" placeholder="Re-enter the new password">
+                            <img src="{{ url_for('static', filename='image/ecloseb.png') }}" alt="eyeopen" id="ceye">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-reset-btn">
+                    <button onclick="resetPassword()">Reset Password</button>
+                </div>
+
+                <div class="panel-back-log">
+                    <label>Back to</label>
+                    <a href="{{ url_for('loginPage') }}">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='image/panel.jpg') }}" alt="panel">
+        </div>
+    </div>
+</body>
+
+</html>
